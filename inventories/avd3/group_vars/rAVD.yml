@@ -1,0 +1,32 @@
+ansible_connection: ansible.netcommon.httpapi
+ansible_network_os: arista.eos.eos
+ansible_user: arista
+ansible_password: arista
+ansible_become: true
+ansible_become_method: enable
+ansible_httpapi_use_ssl: true
+ansible_httpapi_validate_certs: false
+fabric_name: rAVD
+
+underlay_routing_protocol: EBGP
+overlay_routing_protocol: EBGP
+
+local_users:
+  arista:
+    privilege: 15
+    role: network-admin
+    sha512_password: $6$BSMT1WbtoeKM/hK4$kJxcK/KXv4shkWUb9y5MOgNG6EUmmHR5fR4BM2e4uKtXB74lXL1fncHNC0d4xUcW86OJeYapbFZtBdjStkEqv.
+  admin:
+    privilege: 15
+    role: network-admin
+    sha512_password: $6$BSMT1WbtoeKM/hK4$kJxcK/KXv4shkWUb9y5MOgNG6EUmmHR5fR4BM2e4uKtXB74lXL1fncHNC0d4xUcW86OJeYapbFZtBdjStkEqv.
+
+bgp_peer_groups:
+  evpn_overlay_peers:
+    password: Q4fqtbqcZ7oQuKfuWtNGRQ==
+  ipv4_underlay_peers:
+    password: 7x4B4rnJhZB438m9+BrBfQ==
+  mlag_ipv4_underlay_peer:
+    password: 4b21pAdCvWeAqpcKDFMdWw==
+
+p2p_uplinks_mtu: 1500

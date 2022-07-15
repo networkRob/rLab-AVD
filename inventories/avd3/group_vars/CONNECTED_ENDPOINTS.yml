@@ -1,0 +1,62 @@
+---
+servers:
+  leaf1-server1:
+    adapters:
+    - type: NET-12
+      server_ports: [ CMP-11a ]
+      switch_ports: [ Ethernet4 ]
+      switches: [ leaf1a ]
+      vlans: 12
+      mode: access
+      spanning_tree_portfast: edge
+    - type: NET-13
+      server_ports: [ CMP-11b ]
+      switch_ports: [ Ethernet5 ]
+      switches: [ leaf1a ]
+      vlans: 13
+      mode: access
+      spanning_tree_portfast: edge
+
+  leaf2-server1:
+    adapters:
+    - type: NET-12
+      server_ports: [ CMP-21a ]
+      switch_ports: [ Ethernet4 ]
+      switches: [ leaf2a ]
+      vlans: 12
+      mode: access
+      spanning_tree_portfast: edge
+    - type: NET-13
+      server_ports: [ CMP-22a ]
+      switch_ports: [ Ethernet4 ]
+      switches: [ leaf2b ]
+      vlans: 13
+      mode: access
+      spanning_tree_portfast: edge
+
+  leaf3-server1:
+    adapters:
+    - type: NET-12
+      server_ports: [ CMP-31a ]
+      switch_ports: [ Ethernet4 ]
+      switches: [ leaf3a ]
+      vlans: 12
+      mode: access
+      spanning_tree_portfast: edge
+    - type: NET-13
+      server_ports: [ CMP-31b ]
+      switch_ports: [ Ethernet5 ]
+      switches: [ leaf3a ]
+      vlans: 13
+      mode: access
+      spanning_tree_portfast: edge
+
+  leaf4-server1:
+    adapters:
+    - type: NET-14
+      server_ports: [ CMP-41a, CMP-41b, CMP-42a, CMP-42b ]
+      switch_ports: [ Ethernet1, Ethernet2, Ethernet1, Ethernet2 ]
+      switches: [ leaf4a, leaf4a, leaf4b, leaf4b ]
+      vlans: 14
+      mode: access
+      spanning_tree_portfast: edge
