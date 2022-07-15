@@ -29,10 +29,10 @@ all:
                   ansible_host: 192.168.50.215
                 leaf3b:
                   ansible_host: 192.168.50.216
-                leaf4a:
-                  ansible_host: 192.168.50.217
-                leaf4b:
-                  ansible_host: 192.168.50.218
+                # leaf4a:
+                #   ansible_host: 192.168.50.217
+                # leaf4b:
+                #   ansible_host: 192.168.50.218
         NETWORK_SERVICES:
           children:
             DC1_L3_LEAVES:
