@@ -1,0 +1,41 @@
+---
+all:
+  children:
+    rAVD:
+      children:
+        DC1:
+          children:
+            DC1_SPINES:
+              hosts:
+                spine1:
+                  ansible_host: 192.168.50.201
+                spine2:
+                  ansible_host: 192.168.50.202
+                spine3:
+                  ansible_host: 192.168.50.203
+                spine4:
+                  ansible_host: 192.168.50.204
+            DC1_L3_LEAVES:
+              hosts:
+                leaf1a:
+                  ansible_host: 192.168.50.211
+                leaf1b:
+                  ansible_host: 192.168.50.212
+                leaf2a:
+                  ansible_host: 192.168.50.213
+                leaf2b:
+                  ansible_host: 192.168.50.214
+                leaf3a:
+                  ansible_host: 192.168.50.215
+                leaf3b:
+                  ansible_host: 192.168.50.216
+                # leaf4a:
+                #   ansible_host: 192.168.50.217
+                # leaf4b:
+                #   ansible_host: 192.168.50.218
+        NETWORK_SERVICES:
+          children:
+            DC1_L3_LEAVES:
+        CONNECTED_ENDPOINTS:
+          children:
+            DC1_L3_LEAVES:

@@ -6,4 +6,4 @@ sudo podman run --name rlab-avd -it -d \
     -e AVD_GIT_EMAIL="$(git config --get user.email)" \
     -v ${PWD}:/home/avd/rLab:Z \
     -p 8080:8080 \
-    avdteam/vscode:latest
+    rhub.networkrob.com/avd-code:3.8
