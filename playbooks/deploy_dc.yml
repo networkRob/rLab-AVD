@@ -4,4 +4,4 @@
   tasks:
     - name: deploy configuration to device
       import_role:
-         name: arista.avd.eos_config_deploy_eapi
+        name: arista.avd.eos_config_deploy_eapi
